@@ -81,7 +81,7 @@ You can configure IBGraph by adding a `.ibgraph.yml` file from project root dire
 |:---------------------|:--------------------------- |
 | `excluded`           | Path to ignore.    |
 | `included`           | Path to include.   |
-| `reporter`           | Choose the output format between `default`, `dot` and `json`. |
+| `reporter`           | Choose the output format between `default`, `dot`, `json`, `gml` and `graphml`. |
 
 ```yaml
 included:

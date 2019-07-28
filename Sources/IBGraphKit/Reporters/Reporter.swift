@@ -21,6 +21,10 @@ public struct Reporters {
             return DOTReporter.self
         case JSONReporter.identifier:
             return JSONReporter.self
+        case GraphMLReporter.identifier:
+            return GraphMLReporter.self
+        case GMLReporter.identifier:
+            return GMLReporter.self
         default:
             fatalError("no reporter with identifier '\(reporter) available'")
         }

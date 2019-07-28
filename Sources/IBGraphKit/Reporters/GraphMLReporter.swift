@@ -26,7 +26,7 @@ struct GraphMLReporter: Reporter {
 
         for node in nodes {
             string += """
-            
+
    <node id="\(node.id)">
     <data key="d\(node.id)">
      <y:ShapeNode>

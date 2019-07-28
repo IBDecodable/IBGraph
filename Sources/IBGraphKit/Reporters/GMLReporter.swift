@@ -21,7 +21,7 @@ graph [
             let (i, v) = arg
             return Node(id: i, label: v.description)
         }
- 
+
         for node in nodes {
 string += """
 \n       node [

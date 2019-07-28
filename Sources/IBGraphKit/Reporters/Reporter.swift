@@ -25,6 +25,8 @@ public struct Reporters {
             return GraphMLReporter.self
         case GMLReporter.identifier:
             return GMLReporter.self
+            // https://en.wikipedia.org/wiki/DGML
+            // https://en.wikipedia.org/wiki/Trivial_Graph_Format
         default:
             fatalError("no reporter with identifier '\(reporter) available'")
         }

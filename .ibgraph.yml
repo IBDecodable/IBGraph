@@ -1,0 +1,4 @@
+included:
+- ".build/checkouts/IBDecodable"
+- "Tests"
+reporter: "dot"

@@ -15,6 +15,8 @@ public struct Reporters {
 
     public static func reporter(from reporter: String) -> Reporter.Type {
         switch reporter {
+        case DefaultReporter.identifier:
+            return DefaultReporter.self
         case DOTReporter.identifier:
             return DOTReporter.self
         case JSONReporter.identifier:

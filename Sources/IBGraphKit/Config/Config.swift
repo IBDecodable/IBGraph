@@ -23,7 +23,7 @@ public struct Config: Codable {
 
     public static let fileName = ".ibgraph.yml"
     public static let `default` = Config.init()
-    public static let defaultReporter = "dot"
+    public static let defaultReporter = "default"
 
     private init() {
         excluded = []

@@ -60,8 +60,8 @@ struct GenerateOptions: OptionsProtocol {
     static func evaluate(_ mode: CommandMode) -> Result<GenerateCommand.Options, CommandantError<GenerateOptions.ClientError>> {
         return create
             <*> mode <| Option(key: "path", defaultValue: nil, usage: "validate project root directory")
-            <*> mode <| Option(key: "reporter", defaultValue: nil, usage: "the reporter used to log errors and warnings")
-            <*> mode <| Option(key: "config", defaultValue: nil, usage: "the path to IBLint's configuration file")
+            <*> mode <| Option(key: "reporter", defaultValue: nil, usage: "the reporter used to show graph")
+            <*> mode <| Option(key: "config", defaultValue: nil, usage: "the path to IBGraph's configuration file")
     }
 }
 

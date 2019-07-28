@@ -11,7 +11,8 @@ import IBDecodable
 import SwiftGraph
 import SwiftGraphBindings
 
-public typealias IBGraph = UnweightedGraph<String>
+public typealias Vertex = String
+public typealias IBGraph = UnweightedGraph<Vertex>
 
 public enum IBGraphType: String, Codable {
     case storyboard
@@ -22,8 +23,8 @@ public enum IBGraphType: String, Codable {
 
 public extension Sequence where Element == StoryboardFile {
 
-    func graph(type: IBGraphType = .storyboard) -> UnweightedGraph<String> {
-        let graph = UnweightedGraph<String>()
+    func graph(type: IBGraphType = .storyboard) -> UnweightedGraph<Vertex> {
+        let graph = UnweightedGraph<Vertex>()
 
         var vertexes: [String: Int] = [:]
         // Add vertex

@@ -3,7 +3,6 @@
 [![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
 A tool to create a graph representaton of your  `.storyboard` files.
-The default format is `dot`. You can visualize it using for instance graphviz.
 
 ## Usage
 
@@ -20,6 +19,14 @@ Available commands:
 
 ### Generate command
 
+#### Using `default` reporter
+
+```
+$ ibgraph
+First -> ["Second"]
+```
+
+#### Using `dot` reporter
 ```
 $ ibgraph
 digraph {
@@ -44,13 +51,15 @@ fi
 
 ### Convert graph to png
 
-You can install `graphviz` using Homebrew
+First use `dot` reporter.
+
+Then you can install `graphviz` using Homebrew
 
 ```
 brew install graphviz
 ```
 
-then launch the convertion using `dot` command
+And finally launch the convertion using `dot` command
 
 ```
 dot -Tpng MyStoryboards.dot -o MyStoryboards.png
@@ -72,7 +81,7 @@ You can configure IBGraph by adding a `.ibgraph.yml` file from project root dire
 |:---------------------|:--------------------------- |
 | `excluded`           | Path to ignore.    |
 | `included`           | Path to include.   |
-| `reporter`           | Choose the output format between `dot` and `json`. |
+| `reporter`           | Choose the output format between `default`, `dot` and `json`. |
 
 ```yaml
 included:

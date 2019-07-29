@@ -4,6 +4,16 @@
 
 A tool to create a graph representaton of your  `.storyboard` files.
 
+## Install
+
+### Using sources
+
+```
+git clone https://github.com/IBDecodable/IBGraph.git
+cd IBGraph
+make install
+```
+
 ## Usage
 
 You can see all description by `ibgraph help`

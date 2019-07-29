@@ -23,7 +23,7 @@ Available commands:
 
 ```
 $ ibgraph
-First -> ["Second"]
+FirstViewController -> ["SecondViewController"]
 ```
 
 #### Using `dot` reporter

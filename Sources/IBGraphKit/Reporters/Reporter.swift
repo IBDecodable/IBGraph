@@ -25,6 +25,8 @@ public struct Reporters {
             return GraphMLReporter.self
         case GMLReporter.identifier:
             return GMLReporter.self
+        case OnlineReporter.identifier:
+            return OnlineReporter.self
             // https://en.wikipedia.org/wiki/DGML
             // https://en.wikipedia.org/wiki/Trivial_Graph_Format
         default:

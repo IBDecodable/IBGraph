@@ -14,6 +14,19 @@ cd IBGraph
 make install
 ```
 
+### Using Homebrew (swiftbrew)
+
+If not already installed yet, install [Swiftbrew](https://github.com/swiftbrew/Swiftbrew) with [Homebrew](https://brew.sh/index_fr)
+
+```
+brew install swiftbrew/tap/swiftbrew
+```
+
+then type 
+```
+swift brew install IBDecodable/IBGraph
+```
+
 ## Usage
 
 You can see all description by `ibgraph help`
@@ -38,18 +51,28 @@ FirstViewController -> ["SecondViewController"]
 
 #### Using `dot` reporter
 ```
-$ ibgraph
+$ ibgraph --reporter dot
 digraph {
     0 [label = "FirstViewController"];
     1 [label = "SecondViewController"];
 
     0 -> 1;
 }
+# or ibgraph if reporter defined in configuration file
 ```
 
 _[Visualize this graph online](http://bit.ly/2YtkuY5)_
 
 _[Example on IBAnimatable demo app](http://bit.ly/2STM1wW)_
+
+#### Using `online` reporter
+
+This reporter open the graph on https://dreampuf.github.io/GraphvizOnline/
+
+```
+$ ibgraph --reporter online
+Open url https://dreampuf.github.io/GraphvizOnline/#digraph....
+```
 
 ### Xcode
 
@@ -95,7 +118,7 @@ You can configure IBGraph by adding a `.ibgraph.yml` file from project root dire
 |:---------------------|:--------------------------- |
 | `excluded`           | Path to ignore.    |
 | `included`           | Path to include.   |
-| `reporter`           | Choose the output format between `default`, `dot`, `json`, `gml` and `graphml`. |
+| `reporter`           | Choose the output format between `default`, `dot`, `json`, `gml` and `graphml`. Or `online` to open graph on default browser.|
 
 ```yaml
 included:

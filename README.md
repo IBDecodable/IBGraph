@@ -49,6 +49,8 @@ digraph {
 
 _[Visualize this graph online](http://bit.ly/2YtkuY5)_
 
+_[Example on IBAnimatable demo app](http://bit.ly/2STM1wW)_
+
 ### Xcode
 
 Add a `Run Script Phase` to integrate IBGraph with Xcode

@@ -74,21 +74,10 @@ $ ibgraph --reporter online
 Open url https://dreampuf.github.io/GraphvizOnline/#digraph....
 ```
 
-### Xcode
-
-Add a `Run Script Phase` to integrate IBGraph with Xcode
-
-```sh
-if which ibgraph >/dev/null; then
-  ibgraph generate
-else
-  echo "warning: IBGraph not installed, download from https://github.com/IBDecodable/IBGraph"
-fi
-```
-
 ### Convert graph to png
 
 First use `dot` reporter.
+
 
 Then you can install `graphviz` using Homebrew
 
@@ -96,10 +85,33 @@ Then you can install `graphviz` using Homebrew
 brew install graphviz
 ```
 
-And finally launch the convertion using `dot` command
+And finally launch the convertion using `dot` command on your result file
 
 ```
 dot -Tpng MyStoryboards.dot -o MyStoryboards.png
+```
+
+or directly after `ibgraph` launch
+
+```
+ ibgraph --reporter dot | dot -Tpng -o MyStoryboards.png
+```
+
+#### Xcode
+
+Add a `Run Script Phase` to integrate IBGraph with Xcode
+
+```sh
+if which ibgraph >/dev/null; then
+  if which dot >/dev/null; then
+    ibgraph generate --reporter dot | dot -Tpng -o storyboards.png
+  else
+    echo "warning: dot from graphviz is not installed, check how to install here https://github.com/IBDecodable/IBGraph#convert-graph-to-png"
+  fi
+fi
+else
+  echo "warning: IBGraph not installed, download from https://github.com/IBDecodable/IBGraph"
+fi
 ```
 
 ## Requirements

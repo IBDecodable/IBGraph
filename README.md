@@ -37,7 +37,7 @@ Available commands:
 
    help      Display general or command-specific help
    generate  Show graph (default command)
-   version   Display the current version of SwiftLint
+   version   Display the current version of ibgraph
 ```
 
 ### Generate command

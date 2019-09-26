@@ -5,7 +5,6 @@
 //  Created by phimage on 28/07/2019.
 //
 
-import Result
 import Commandant
 
 struct VersionCommand: CommandProtocol {

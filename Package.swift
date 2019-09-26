@@ -19,7 +19,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/ferranpujolcamins/DotSwift.git", .revision("HEAD")),
         .package(url: "https://github.com/IBDecodable/IBDecodable.git", .revision("HEAD")),
-        .package(url: "https://github.com/Carthage/Commandant.git", .upToNextMinor(from: "0.16.0")),
+        .package(url: "https://github.com/Carthage/Commandant.git", .upToNextMinor(from: "0.17.0")),
         .package(url: "https://github.com/jpsim/Yams.git", .upToNextMinor(from: "2.0.0")),
         .package(url:"https://github.com/kylef/PathKit.git", .upToNextMinor(from:"1.0.0"))
     ],

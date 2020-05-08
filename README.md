@@ -65,6 +65,12 @@ _[Visualize this graph online](http://bit.ly/2YtkuY5)_
 
 _[Example on IBAnimatable demo app](http://bit.ly/2STM1wW)_
 
+or if you ave `graphviz` installed you can open preview
+
+```bash
+ibgraph --reporter dot | dot -Tpng | open -Wfa preview
+```
+
 #### Using `online` reporter
 
 This reporter open the graph on https://dreampuf.github.io/GraphvizOnline/
